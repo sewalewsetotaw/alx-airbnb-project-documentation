@@ -71,6 +71,7 @@ DELETE	/api/properties/:id	Delete a property
 Request Body:
 
 json
+
 {
   "title": "Cozy Addis Apartment",
   "description": "Located in Bole, near Edna Mall",
@@ -82,6 +83,7 @@ json
 Response:
 
 json
+
 {
   "message": "Property listed successfully",
   "property_id": "prop_001"
@@ -115,6 +117,7 @@ DELETE	/api/bookings/:id	Cancel a booking
 Request Body:
 
 json
+
 {
   "property_id": "prop_001",
   "check_in": "2025-07-04",

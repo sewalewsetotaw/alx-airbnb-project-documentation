@@ -36,6 +36,8 @@ Manages user registration and login using secure authentication via JSON Web Tok
 Response:
 
 json
+Copy
+Edit
 {
   "message": "User registered successfully",
   "token": "<jwt_token>"
@@ -71,7 +73,8 @@ DELETE	/api/properties/:id	Delete a property
 Request Body:
 
 json
-
+Copy
+Edit
 {
   "title": "Cozy Addis Apartment",
   "description": "Located in Bole, near Edna Mall",
@@ -83,7 +86,8 @@ json
 Response:
 
 json
-
+Copy
+Edit
 {
   "message": "Property listed successfully",
   "property_id": "prop_001"
@@ -117,7 +121,8 @@ DELETE	/api/bookings/:id	Cancel a booking
 Request Body:
 
 json
-
+Copy
+Edit
 {
   "property_id": "prop_001",
   "check_in": "2025-07-04",
@@ -126,6 +131,8 @@ json
 Response:
 
 json
+Copy
+Edit
 {
   "message": "Booking confirmed",
   "booking_id": "book_001"
@@ -143,4 +150,23 @@ Prevent overlapping bookings for the same property.
 Booking creation: < 800ms
 
 Availability check: < 300ms
+
+✅ General Notes
+All endpoints should return proper HTTP status codes:
+
+200 OK – Successful request
+
+201 Created – New resource created
+
+400 Bad Request – Validation error
+
+401 Unauthorized – Invalid or missing token
+
+404 Not Found – Resource doesn’t exist
+
+API supports JWT-based authentication for secure sessions.
+
+Requests and responses use JSON format.
+
+Future improvements may include GraphQL support for advanced queries.
 ```

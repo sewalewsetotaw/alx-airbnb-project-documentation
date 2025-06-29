@@ -6,7 +6,7 @@ All user examples below use localized Ethiopian names for illustration.
 
 ---
 
-## 🔐 1. User Authentication (የተጠቃሚ ማረጋገጫ)
+## 🔐 1. User Authentication
 
 ### 📌 Overview
 
@@ -36,6 +36,8 @@ Manages user registration and login using secure authentication via JSON Web Tok
 Response:
 
 json
+Copy
+Edit
 {
   "message": "User registered successfully",
   "token": "<jwt_token>"
@@ -69,6 +71,8 @@ DELETE	/api/properties/:id	Delete a property
 Request Body:
 
 json
+Copy
+Edit
 {
   "title": "Cozy Addis Apartment",
   "description": "Located in Bole, near Edna Mall",
@@ -80,6 +84,8 @@ json
 Response:
 
 json
+Copy
+Edit
 {
   "message": "Property listed successfully",
   "property_id": "prop_001"
@@ -111,6 +117,8 @@ DELETE	/api/bookings/:id	Cancel a booking
 Request Body:
 
 json
+Copy
+Edit
 {
   "property_id": "prop_001",
   "check_in": "2025-07-04",
@@ -119,6 +127,8 @@ json
 Response:
 
 json
+Copy
+Edit
 {
   "message": "Booking confirmed",
   "booking_id": "book_001"

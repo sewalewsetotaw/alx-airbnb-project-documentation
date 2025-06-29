@@ -26,21 +26,20 @@ Manages user registration and login using secure authentication via JSON Web Tok
 
 **Request Body:**
 
-```json
+json
 {
-  "first_name": "Abebaw",
-  "last_name": "Tadesse",
-  "email": "abebaw@example.com",
-  "password": "password123"
+"first_name": "Abebaw",
+"last_name": "Tadesse",
+"email": "abebaw@example.com",
+"password": "password123"
 }
 Response:
 
 json
-Copy
-Edit
+
 {
-  "message": "User registered successfully",
-  "token": "<jwt_token>"
+"message": "User registered successfully",
+"token": "<jwt_token>"
 }
 ✅ Validation Rules
 Email must be valid and unique.
@@ -59,36 +58,32 @@ Login response: < 500ms
 Allows hosts to create and manage property listings. Properties include details like location, pricing, and amenities.
 
 🛠️ API Endpoints
-Method	Endpoint	Description
-POST	/api/properties	Create property listing
-GET	/api/properties	Get all properties (with filters)
-GET	/api/properties/:id	Get property detail
-PUT	/api/properties/:id	Update a property
-DELETE	/api/properties/:id	Delete a property
+Method Endpoint Description
+POST /api/properties Create property listing
+GET /api/properties Get all properties (with filters)
+GET /api/properties/:id Get property detail
+PUT /api/properties/:id Update a property
+DELETE /api/properties/:id Delete a property
 
 📥 Input / 📤 Output
 🔸 /api/properties (POST)
 Request Body:
 
 json
-Copy
-Edit
 {
-  "title": "Cozy Addis Apartment",
-  "description": "Located in Bole, near Edna Mall",
-  "location": "Addis Ababa",
-  "price": 150,
-  "amenities": ["wifi", "parking", "kitchen"],
-  "availability": ["2025-07-01", "2025-07-10"]
+"title": "Cozy Addis Apartment",
+"description": "Located in Bole, near Edna Mall",
+"location": "Addis Ababa",
+"price": 150,
+"amenities": ["wifi", "parking", "kitchen"],
+"availability": ["2025-07-01", "2025-07-10"]
 }
 Response:
 
 json
-Copy
-Edit
 {
-  "message": "Property listed successfully",
-  "property_id": "prop_001"
+"message": "Property listed successfully",
+"property_id": "prop_001"
 }
 ✅ Validation Rules
 Title, location, and price are required.
@@ -107,31 +102,28 @@ Listing creation/update: < 700ms
 Enables guests to book properties by selecting available dates and processing payment.
 
 🛠️ API Endpoints
-Method	Endpoint	Description
-POST	/api/bookings	Create new booking
-GET	/api/bookings	Retrieve user bookings
-DELETE	/api/bookings/:id	Cancel a booking
+Method Endpoint Description
+POST /api/bookings Create new booking
+GET /api/bookings Retrieve user bookings
+DELETE /api/bookings/:id Cancel a booking
 
 📥 Input / 📤 Output
 🔸 /api/bookings (POST)
 Request Body:
 
 json
-Copy
-Edit
+
 {
-  "property_id": "prop_001",
-  "check_in": "2025-07-04",
-  "check_out": "2025-07-08"
+"property_id": "prop_001",
+"check_in": "2025-07-04",
+"check_out": "2025-07-08"
 }
 Response:
 
 json
-Copy
-Edit
 {
-  "message": "Booking confirmed",
-  "booking_id": "book_001"
+"message": "Booking confirmed",
+"booking_id": "book_001"
 }
 ✅ Validation Rules
 Property must be available for selected dates.
@@ -163,4 +155,3 @@ API supports JWT-based authentication for secure sessions.
 Requests and responses use JSON format.
 
 Future improvements may include GraphQL support for advanced queries.
-```
